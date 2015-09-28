@@ -45,4 +45,10 @@ class ProgressBar
       @clear_required = true
     end
   end
+  class Base
+    # Expose percentage
+    def percentage_completed_with_precision
+      progressable.percentage_completed_with_precision.strip
+    end
+  end
 end
